@@ -1,5 +1,6 @@
 class Api::V1::BaseController < ActionController::API
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
+  acts_as_token_authentication_handler_for User
 
   include Pundit
 
@@ -31,3 +32,4 @@ class Api::V1::BaseController < ActionController::API
     render json: response, status: :internal_server_error
   end
 end
+
