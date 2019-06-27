@@ -8,6 +8,7 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
     else
       @restaurants = policy_scope(Restaurant).where('name ILIKE ?', "%#{params[:search]}%")
     end
+    render :index
   end
 
   def show
@@ -45,6 +46,7 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
   end
 
   def restaurant_params
+    # params.require(:restaurant).permit(:name, :address, comments_attributes: [ :id, :comment ])
     params.require(:restaurant).permit(:name, :address)
   end
 
