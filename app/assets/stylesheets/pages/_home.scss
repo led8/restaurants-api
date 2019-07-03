@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restaurant {
+  text-align: center;
+  border: 2px solid limegreen;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.address {
+  color: tomato;
+}
+
+.container {
+  padding: 50px;
+}

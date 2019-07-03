@@ -3,6 +3,11 @@ class Api::V1::CommentsController < Api::V1::BaseController
 
   def index
     @comments = @restaurant.comments.order(created_at: :desc)
+
+    puts "*** COMMENTS ***"
+    @comments.each{|comment| puts comment.content}
+    puts "****************"
+
   end
 
   def create

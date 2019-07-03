@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+
+  <%= form_tag root_path, method: :get do %>
+    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a restaurant" %>
+  <% end %>
+
+  <div class="restaurants">
+    <% @restaurants.each do |restaurant| %>
+      <div class="restaurant">
+        <h2 class="name"><%= restaurant.name %></h4>
+        <h4 class="address"><%= restaurant.address %></h4>
+        <% restaurant.comments.each do |comment| %>
+          <h6 class="comments"><%= comment.content %></h6>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
