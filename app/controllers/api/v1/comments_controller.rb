@@ -50,10 +50,3 @@ end
 #      -H 'X-User-Token: _Vr-DhDse5YJgZE4AGLx'                                 \
 #      -d '{ "comment": { "content": "ENFIN ?" } }' \
 #      http://localhost:3000/api/v1/restaurants/3/comments
-
-
-
-
-
-
-
